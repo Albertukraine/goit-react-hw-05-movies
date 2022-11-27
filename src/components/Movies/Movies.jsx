@@ -7,9 +7,9 @@ export const Movies = props => {
     <button>Go Back</button>
     <ul>
         {trendFilms.map(film => <li onClick = {onFilmClick} id={film.id} key={film.id}>
-            <a>
+            <button>
             {film.original_title} {film.name}
-            </a>
+            </button>
             </li>)}
     </ul>
     </>
