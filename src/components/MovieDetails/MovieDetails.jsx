@@ -6,7 +6,7 @@ export const MovieDetails = props => {
     return (
         <div><p>{original_title}</p>
         <p>{overview}</p>
-       <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`}></img>
+       <img alt={original_title} src={`https://image.tmdb.org/t/p/w500/${poster_path}`}></img>
        </div>
     )
 }
