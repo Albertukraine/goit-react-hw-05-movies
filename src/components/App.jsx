@@ -7,7 +7,7 @@ import { MovieDetails } from "./MovieDetails/MovieDetails";
 import { Reviews } from "./Reviews/Reviews";
 
 export function App() {
-const [searchQuery, setSearchQuery] = useState('');
+// const [searchQuery, setSearchQuery] = useState('');
 const [trendFilms, setTrendFilms] = useState([]);
 const [filmToShowID, setFilmToShowID] = useState('');
 const [movieDetails, setMovieDetails] = useState([]);
