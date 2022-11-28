@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 export const Movies = props => {
     const {trendFilms, onFilmClick} = props;
     console.log("Props at movies",trendFilms);
@@ -7,9 +9,9 @@ export const Movies = props => {
     <button>Go Back</button>
     <ul>
         {trendFilms.map(film => <li onClick = {onFilmClick} id={film.id} key={film.id}>
-            <button>
-            {film.original_title} {film.name}
-            </button>
+            <Link>
+            {film.title}
+            </Link>
             </li>)}
     </ul>
     </>
