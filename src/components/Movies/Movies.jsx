@@ -6,10 +6,9 @@ export const Movies = props => {
 
     return ( <>
     
-    <button>Go Back</button>
     <ul>
         {trendFilms.map(film => <li onClick = {onFilmClick} id={film.id} key={film.id}>
-            <Link>
+            <Link to={'/details'}>
             {film.title}
             </Link>
             </li>)}

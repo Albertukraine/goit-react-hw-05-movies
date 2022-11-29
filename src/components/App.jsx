@@ -1,12 +1,13 @@
 import React from 'react';
-// import { Route } from 'react-router-dom';
-// import { Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Home } from './Home/Home';
+import { HomePage } from 'Pages/HomePage/HomePage';
 import { Movies } from './Movies/Movies';
 import { MovieDetails } from './MovieDetails/MovieDetails';
-import { Reviews } from './Reviews/Reviews';
-import { MoviePage } from 'Pages/MoviePage/MoviePage';
+import { MovieCast } from 'Pages/MovieCast/MovieCast';
+import { SearchPage } from 'Pages/SearchPage/Searchpage';
+import { MovieRewiews } from 'Pages/MovieReviews/MovieRewiews';
 
 
 export function App() {
@@ -14,9 +15,6 @@ export function App() {
   const [trendFilms, setTrendFilms] = useState([]);
   const [filmToShowID, setFilmToShowID] = useState('');
   const [movieDetails, setMovieDetails] = useState([]);
-  
-
-
 
   const APIKEY = '70d2b9230e2d15a833e0a1e0ef2cf000';
 
@@ -46,14 +44,20 @@ export function App() {
 
   return (
     <>
-      
+    <Routes>
+      <Route path='/' element={<HomePage />} >
+        <Route path='details' element={<MovieDetails movieDetails={movieDetails} />}/>
+        <Route path='cast' element={<MovieCast filmToShowID={filmToShowID} />}/>
+        <Route path='reviews' element={<MovieRewiews filmToShowID={filmToShowID}/>}/>
+      </Route>
+      <Route path='/home' element={<Movies onFilmClick={onFilmClick} trendFilms={trendFilms} />}/>
 
-      <Home />
-      <Movies onFilmClick={onFilmClick} trendFilms={trendFilms} />
-      <Reviews />
-      <MovieDetails movieDetails={movieDetails} />
-      <MoviePage filmToShowID={filmToShowID} />
+    </Routes>
+   
+<SearchPage />
+    
+    
+     
     </>
   );
 }
-
