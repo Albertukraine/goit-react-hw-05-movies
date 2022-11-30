@@ -22,6 +22,7 @@ export const SearchPage = () => {
   };
 
   useEffect(() => {
+    if(!normalizedQuery) {return};
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&language=en-US&query=${normalizedQuery}&page=1&include_adult=false`
     )

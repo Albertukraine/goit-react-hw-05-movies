@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 
+
 const APIKEY = '70d2b9230e2d15a833e0a1e0ef2cf000';
 
 export const MovieCast = props => {
@@ -14,15 +15,14 @@ useEffect(() => {
     .then(result => setArtistCast(result.cast));
 },[filmToShowID]);
 
-    return (
-    
+    return ( <>
     <div>
-        <h2>Cast</h2>
+        <h2>Cast from cast</h2>
         <ul> 
         {artistCast?.map(actor => <li key={actor.id}>{actor.name}</li>)}
        </ul>
-     
     </div>
-    
+    </>
+  
     )
 }

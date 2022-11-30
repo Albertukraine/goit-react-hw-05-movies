@@ -2,12 +2,12 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { HomePage } from 'Pages/HomePage/HomePage';
+import { Header } from 'Pages/HomePage/HomePage';
 import { Movies } from './Movies/Movies';
 import { MovieDetails } from './MovieDetails/MovieDetails';
 import { MovieCast } from 'Pages/MovieCast/MovieCast';
 import { SearchPage } from 'Pages/SearchPage/Searchpage';
-import { MovieRewiews } from 'Pages/MovieReviews/MovieRewiews';
+import { MovieReviews } from 'Pages/MovieReviews/MovieRewiews';
 
 
 export function App() {
@@ -44,19 +44,18 @@ export function App() {
 
   return (
     <>
+    <Header />
     <Routes>
-      <Route path='/' element={<HomePage />} >
-        <Route path='details' element={<MovieDetails movieDetails={movieDetails} />}/>
-        <Route path='cast' element={<MovieCast filmToShowID={filmToShowID} />}/>
-        <Route path='reviews' element={<MovieRewiews filmToShowID={filmToShowID}/>}/>
-      </Route>
-      <Route path='/home' element={<Movies onFilmClick={onFilmClick} trendFilms={trendFilms} />}/>
+       <Route path='search' element={<SearchPage />}/>
+       <Route path='home' element={<Movies onFilmClick={onFilmClick} trendFilms={trendFilms} />}/>
+        <Route path='/details' element={<MovieDetails movieDetails={movieDetails} />}>
+         <Route path='cast' element={<MovieCast filmToShowID={filmToShowID} />}/>
+         <Route path='reviews' element={<MovieReviews filmToShowID={filmToShowID}/>}/>
+         
+        </Route>
 
     </Routes>
-   
-<SearchPage />
-    
-    
+  
      
     </>
   );

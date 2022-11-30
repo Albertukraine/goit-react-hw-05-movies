@@ -2,15 +2,14 @@ import {Link, NavLink, Outlet} from 'react-router-dom';
 
 
 
-export const HomePage = props => {
+export const Header = props => {
 
 
 
     return <>
     <header>
         <nav>
-        <NavLink>Movies</NavLink>
-        <NavLink>Search</NavLink>
+        <NavLink to="/search">Search</NavLink>
         <Link to="/home">Go Back</Link>
     </nav>
         </header>

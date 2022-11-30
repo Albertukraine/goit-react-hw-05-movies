@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 
 const APIKEY = '70d2b9230e2d15a833e0a1e0ef2cf000';
 
-export const MovieRewiews = props => {
+export const MovieReviews = props => {
     const {filmToShowID} = props;
 const [movieReviews, setMovieReview] = useState([]);
 
