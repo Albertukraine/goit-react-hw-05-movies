@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Main, HeadTitle, TrendingMoviesList, MovieInfo } from './Home.styled';
+import { Main, HeadTitle, MoviesList, MovieInfo } from './Home.styled';
 import * as API from '../../services/api';
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <Main>
       <HeadTitle>Trending today</HeadTitle>
-      <TrendingMoviesList>
+      <MoviesList>
         {trendingMovies.map(({ id, title }) => (
           <MovieInfo key={id}>
             <Link to={`movies/${id}`} state={{ from: location }}>
@@ -32,7 +32,7 @@ const Home = () => {
             </Link>
           </MovieInfo>
         ))}
-      </TrendingMoviesList>
+      </MoviesList>
     </Main>
   );
 };

@@ -4,7 +4,7 @@ export const CastSection = styled.section``;
 
 export const CastList = styled.ul`
   display: grid;
-  max-width: calc(100vw - 48px);
+  max-width: calc(100vw - 64px);
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 16px;
   margin-top: 0;
@@ -23,17 +23,18 @@ export const ActorInfo = styled.li`
 
 export const ActorPhoto = styled.img`
   margin-bottom: 5px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 5px 3px 3px grey;
+  
 `;
 
 export const ActorName = styled.p`
   font-weight: bold;
-  font-size: 10px;
+  font-size: 15px;
   margin-bottom: 5px;
 `;
 
 export const Сharacter = styled.p`
-  font-size: 10px;
+  font-size: 15px;
 `;

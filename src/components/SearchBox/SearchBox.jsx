@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { SearchForm, Input, Button, ButtonLabel } from './SearchBox.styled';
+import { SearchForm, Input, Button, ButtonInfo } from './SearchBox.styled';
 
 export const SearchBox = ({ onSubmit }) => {
   return (
@@ -9,10 +9,10 @@ export const SearchBox = ({ onSubmit }) => {
         type="text"
         autoComplete="off"
         autoFocus
-        placeholder="Search movies"
+        placeholder="Search movie"
       />
       <Button type="submit">
-        <ButtonLabel>Search</ButtonLabel>
+        <ButtonInfo>Search</ButtonInfo>
       </Button>
     </SearchForm>
   );

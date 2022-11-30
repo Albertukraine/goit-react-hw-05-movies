@@ -1,5 +1,6 @@
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { SearchBox } from '../../components/SearchBox';
 import { Main, MovieList, MovieItem } from './Movies.styled';
@@ -28,7 +29,7 @@ const Movies = () => {
 
         setMovie(movie.results);
       } catch (error) {
-        toast.error(`Oops something went wrong, try again.`);
+        toast.error(`It's not bad but try again.`);
       }
     }
 
@@ -40,7 +41,7 @@ const Movies = () => {
     const form = e.currentTarget;
 
     if (form.elements.query.value.trim() === '') {
-      toast.warn('In the Search field, enter the text to be searched.', {
+      toast.warn('Please, enter some text', {
         theme: 'dark',
       });
 

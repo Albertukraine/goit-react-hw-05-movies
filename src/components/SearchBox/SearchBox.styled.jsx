@@ -36,16 +36,16 @@ export const Button = styled.button`
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.6;
+  opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
   :hover {
-    opacity: 1;
+    opacity: 0.5;
   }
 `;
 
-export const ButtonLabel = styled.span`
+export const ButtonInfo = styled.span`
   position: absolute;
   width: 1px;
   height: 1px;
@@ -53,6 +53,6 @@ export const ButtonLabel = styled.span`
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  clip-path: inset(50%);
+  clip-path: inset(80%);
   border: 0;
 `;

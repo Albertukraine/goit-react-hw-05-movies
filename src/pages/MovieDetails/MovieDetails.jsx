@@ -5,8 +5,8 @@ import { BackLink } from 'components/BackLink/BackLink';
 import {
   Main,
   Box,
-  MamoviePoster,
-  MamovieDetails,
+  PosterWrapper,
+  DetailsWrapper,
   Title,
   UserScore,
   Overview,
@@ -46,11 +46,11 @@ const MovieDetails = () => {
     <Main>
       <BackLink to={backLinkHref}>Go back</BackLink>
       <Box>
-        <MamoviePoster
+        <PosterWrapper
           src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
           alt={movieDetails.title}
         />
-        <MamovieDetails>
+        <DetailsWrapper>
           <Title>{movieDetails.title}</Title>
           <UserScore>
             User score: {Math.round(movieDetails.vote_average * 10)}%
@@ -61,7 +61,7 @@ const MovieDetails = () => {
           <GenresContent>
             {movieDetails.genres.map(genre => genre.name).join(', ')}
           </GenresContent>
-        </MamovieDetails>
+        </DetailsWrapper>
       </Box>
       <AdditionalInfo>
         <AdditionalInfoTitle>Additional information</AdditionalInfoTitle>

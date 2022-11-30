@@ -7,12 +7,13 @@ export const Box = styled.div`
   margin-bottom: 20px;
 `;
 
-export const MamoviePoster = styled.img`
+export const PosterWrapper = styled.img`
   width: 200px;
   margin-right: 20px;
+  border-radius: 5px;
 `;
 
-export const MamovieDetails = styled.div``;
+export const DetailsWrapper = styled.div``;
 
 export const Title = styled.h2`
   margin-bottom: 15px;
