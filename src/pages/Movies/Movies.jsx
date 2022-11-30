@@ -21,7 +21,7 @@ const Movies = () => {
 
         if (movie.total_results === 0) {
           toast.warn('Your search did not return any results.', {
-            theme: 'dark',
+            theme: 'light',
           });
 
           return;
@@ -42,7 +42,7 @@ const Movies = () => {
 
     if (form.elements.query.value.trim() === '') {
       toast.warn('Please, enter some text', {
-        theme: 'dark',
+        theme: 'light',
       });
 
       return;

@@ -1,11 +1,11 @@
 import { HiChevronDoubleLeft } from 'react-icons/hi';
-import { StyledLink } from './BackLink.styled';
+import { LinkStyled } from './BackLink.styled';
 
 export const BackLink = ({ to, children }) => {
   return (
-    <StyledLink to={to}>
-      <HiChevronDoubleLeft size="24" />
+    <LinkStyled to={to}>
+      <HiChevronDoubleLeft size="16" />
       {children}
-    </StyledLink>
+    </LinkStyled>
   );
 };
